@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textViewLabelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style = "@style/LabelStyle"
+        android:text="Название:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    <View
+        style="@style/BorderStyle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintBottom_toTopOf="@id/textViewOriginalTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="4dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLabelOriginalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style = "@style/LabelStyle"
+
+        android:text="Оригинальное название:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+    <View
+        style="@style/BorderStyle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOriginalTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewRaiting"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="4dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewOriginalTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle"
+        android:text="TextView"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textViewLabelRaiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style = "@style/LabelStyle"
+        android:text="Рейтинг:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOriginalTitle" />
+
+    <View
+        style="@style/BorderStyle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRaiting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewDateRelease"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="4dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewRaiting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOriginalTitle" />
+
+    <TextView
+        android:id="@+id/textViewLabelDateRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style = "@style/LabelStyle"
+        android:text="Дата релиза:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRaiting" />
+    <View
+        style="@style/BorderStyle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateRelease"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewLabelDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="4dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewDateRelease"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRaiting" />
+
+    <TextView
+        android:id="@+id/textViewLabelDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style = "@style/LabelStyle"
+        android:text="Описание:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateRelease" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/fgh"
+        android:textSize="30sp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabelDescription" />
+    <View
+        style="@style/BorderStyle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewLabelTrailers"
+        android:layout_margin="4dp"
+        />
+    <TextView
+        android:id="@+id/textViewLabelTrailers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LabelStyle"
+        android:text="Трейлер:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/Trailer"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLabelTrailers"
+        android:layout_height="wrap_content" />
+    <View
+        style="@style/BorderStyle"
+        app:layout_constraintTop_toBottomOf="@+id/Trailer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewLabelReviews"
+        android:layout_margin="4dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewLabelReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LabelStyle"
+        android:text="Отзывы:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Trailer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id= "@+id/Reviews"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLabelReviews"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollViewInfo"
+    android:background="#000000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <ImageView
+        android:id="@+id/imageViewBigPoster"
+        android:layout_width="0dp"
+        android:adjustViewBounds="true"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/imageViewAddToFavorite"
+        android:layout_width="60dp"
+        android:onClick="onClickChangeFavourite"
+        android:layout_height="60dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBigPoster"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBigPoster"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBigPoster"
+        app:srcCompat="@drawable/favourite_remove" />
+
+    <include
+        layout="@layout/movie_info"
+        android:id="@+id/movieInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewAddToFavorite"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
