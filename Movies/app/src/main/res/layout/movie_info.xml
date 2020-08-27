@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#000000"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -60,11 +61,10 @@
 
     <TextView
         android:id="@+id/textViewOriginalTitle"
+        style="@style/TextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/TextStyle"
         android:text="TextView"
-        android:layout_marginLeft="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
@@ -140,9 +140,9 @@
         android:layout_marginLeft="8dp"
         android:textColor="@color/white"
         android:fontFamily="@font/fgh"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        tools:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLabelDescription" />
     <View
